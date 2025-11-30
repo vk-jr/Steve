@@ -30,6 +30,19 @@ const WhereWeAre = () => {
                         </li>
                     </ul>
                 </div>
+
+                <div className="w-full h-[400px] rounded-lg overflow-hidden border border-gray-200 shadow-sm">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3389.677364878664!2d-114.9333333!3d31.0666667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x812e0c0000000001%3A0x0!2sRancho%20Costa%20Verde!5e0!3m2!1sen!2smx!4v1625000000000!5m2!1sen!2smx"
+                        width="100%"
+                        height="100%"
+                        style={{ border: 0 }}
+                        allowFullScreen
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
+                        title="Rancho Costa Verde Location"
+                    ></iframe>
+                </div>
             </div>
         </DevelopmentPageLayout>
     );

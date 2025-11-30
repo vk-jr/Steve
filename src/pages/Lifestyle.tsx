@@ -1,4 +1,4 @@
-import Layout from '@/components/Layout';
+
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 import { image1, image2, image5, image14, image25, logo } from '../assets/imageImports';
@@ -162,83 +162,81 @@ const Lifestyle = () => {
     };
 
     return (
-        <Layout>
-            <div className="min-h-screen">
-                {/* Hero Section */}
-                <section className="relative h-screen overflow-hidden">
-                    <div className="absolute inset-0">
-                        <img
-                            src={image1}
-                            alt="Lifestyle at Rancho Costa Verde"
-                            className="w-full h-full object-cover object-center"
+        <div className="min-h-screen">
+            {/* Hero Section */}
+            <section className="relative h-screen overflow-hidden">
+                <div className="absolute inset-0">
+                    <img
+                        src={image1}
+                        alt="Lifestyle at Rancho Costa Verde"
+                        className="w-full h-full object-cover object-center"
+                    />
+                    <div className="absolute inset-0 bg-black/40" />
+                </div>
+
+                <div className="relative z-10 flex items-center justify-center h-full">
+                    <div className="container mx-auto px-4 text-center">
+                        <motion.img
+                            src={logo}
+                            alt="Rancho Costa Verde Logo"
+                            initial={{ opacity: 0, y: 30 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8 }}
+                            className="w-16 mx-auto mb-6"
                         />
-                        <div className="absolute inset-0 bg-black/40" />
-                    </div>
+                        <motion.h1
+                            initial={{ opacity: 0, y: 50 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8 }}
+                            className="text-4xl md:text-6xl font-cormorant font-light mb-6 text-white"
+                        >
+                            Lifestyle
+                        </motion.h1>
+                        <motion.p
+                            initial={{ opacity: 0, y: 30 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8, delay: 0.2 }}
+                            className="text-lg text-white/95 font-inter mb-12 max-w-2xl mx-auto"
+                        >
+                            Experience the vibrant culture, natural beauty, and community spirit of Baja California
+                        </motion.p>
 
-                    <div className="relative z-10 flex items-center justify-center h-full">
-                        <div className="container mx-auto px-4 text-center">
-                            <motion.img
-                                src={logo}
-                                alt="Rancho Costa Verde Logo"
-                                initial={{ opacity: 0, y: 30 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.8 }}
-                                className="w-16 mx-auto mb-6"
-                            />
-                            <motion.h1
-                                initial={{ opacity: 0, y: 50 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.8 }}
-                                className="text-4xl md:text-6xl font-cormorant font-light mb-6 text-white"
-                            >
-                                Lifestyle
-                            </motion.h1>
-                            <motion.p
-                                initial={{ opacity: 0, y: 30 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.8, delay: 0.2 }}
-                                className="text-lg text-white/95 font-inter mb-12 max-w-2xl mx-auto"
-                            >
-                                Experience the vibrant culture, natural beauty, and community spirit of Baja California
-                            </motion.p>
-
-                            {/* Filter Buttons */}
-                            <div className="flex flex-wrap justify-center gap-4">
-                                {filters.map((filter) => (
-                                    <button
-                                        key={filter}
-                                        onClick={() => setActiveFilter(filter)}
-                                        className={`px-6 py-2 font-inter font-medium transition-all duration-300 ${activeFilter === filter
-                                            ? 'bg-white text-black'
-                                            : 'border border-white text-white hover:bg-white/20'
-                                            }`}
-                                    >
-                                        {filter}
-                                    </button>
-                                ))}
-                            </div>
+                        {/* Filter Buttons */}
+                        <div className="flex flex-wrap justify-center gap-4">
+                            {filters.map((filter) => (
+                                <button
+                                    key={filter}
+                                    onClick={() => setActiveFilter(filter)}
+                                    className={`px-6 py-2 font-inter font-medium transition-all duration-300 ${activeFilter === filter
+                                        ? 'bg-white text-black'
+                                        : 'border border-white text-white hover:bg-white/20'
+                                        }`}
+                                >
+                                    {filter}
+                                </button>
+                            ))}
                         </div>
                     </div>
-                </section>
+                </div>
+            </section>
 
-                {/* Content Section */}
-                <section className="py-20 bg-white">
-                    <div className="container mx-auto px-4">
-                        <AnimatePresence mode="wait">
-                            <motion.div
-                                key={activeFilter}
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                exit={{ opacity: 0, y: -20 }}
-                                transition={{ duration: 0.5 }}
-                            >
-                                {content[activeFilter as keyof typeof content]}
-                            </motion.div>
-                        </AnimatePresence>
-                    </div>
-                </section>
-            </div>
-        </Layout>
+            {/* Content Section */}
+            <section className="py-20 bg-white">
+                <div className="container mx-auto px-4">
+                    <AnimatePresence mode="wait">
+                        <motion.div
+                            key={activeFilter}
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: -20 }}
+                            transition={{ duration: 0.5 }}
+                        >
+                            {content[activeFilter as keyof typeof content]}
+                        </motion.div>
+                    </AnimatePresence>
+                </div>
+            </section>
+        </div>
     );
 };
 
