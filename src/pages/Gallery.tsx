@@ -4,8 +4,7 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 import {
   image1, image2, image3, image4, image5, image6, image7, image8, image9, image10,
-  image11, image12, image13, image14, image15, image16, image17, image18, image19, image20,
-  image21, image22, image23, image24, image25, image26, image27
+  image11, image12, image13, image14, image15, image16, image17, image18, image19, image20
 } from '../assets/imageImports';
 
 const Gallery = () => {
@@ -18,7 +17,7 @@ const Gallery = () => {
     { src: image1, category: 'Video Gallery' },
     { src: image5, category: 'Home Exteriors' },
     { src: image16, category: 'Home Interiors' },
-    { src: image21, category: 'Flora & Fauna' },
+    { src: image11, category: 'Flora & Fauna' },
     // Remaining images categorized
     { src: image2, category: 'Photo Gallery' },
     { src: image3, category: 'Photo Gallery' },
@@ -34,12 +33,9 @@ const Gallery = () => {
     { src: image18, category: 'Home Interiors' },
     { src: image19, category: 'Flora & Fauna' },
     { src: image20, category: 'San Felipe' },
-    { src: image22, category: 'Home Exteriors' },
-    { src: image23, category: 'Video Gallery' },
-    { src: image24, category: 'Home Special Features' },
-    { src: image25, category: 'Flora & Fauna' },
-    { src: image26, category: 'San Felipe' },
-    { src: image27, category: 'Home Exteriors' }
+    { src: image13, category: 'Home Exteriors' },
+    { src: image14, category: 'Video Gallery' },
+    { src: image15, category: 'Home Special Features' }
   ];
 
   const filteredImages = activeFilter === 'ALL' ? images : images.filter(img => img.category === activeFilter);

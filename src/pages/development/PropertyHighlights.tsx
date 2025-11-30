@@ -1,12 +1,12 @@
 import DevelopmentPageLayout from '@/components/DevelopmentPageLayout';
-import { image25 } from '@/assets/imageImports';
+import { image15 } from '@/assets/imageImports';
 
 const PropertyHighlights = () => {
     return (
         <DevelopmentPageLayout
             title="Property Highlights"
             subtitle="A 1,100 acre master planned ecological residential community"
-            heroImage={image25}
+            heroImage={image15}
         >
             <div className="space-y-6">
                 <p>

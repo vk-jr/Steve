@@ -1,12 +1,12 @@
 import DevelopmentPageLayout from '@/components/DevelopmentPageLayout';
-import { image25 } from '@/assets/imageImports';
+import { image15 } from '@/assets/imageImports';
 
 const Careers = () => {
     return (
         <DevelopmentPageLayout
             title="Careers"
             subtitle="Join our passionate team dedicated to creating sustainable, luxurious living"
-            heroImage={image25}
+            heroImage={image15}
         >
             <div className="space-y-8">
                 <section>

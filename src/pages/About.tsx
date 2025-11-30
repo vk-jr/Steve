@@ -1,7 +1,7 @@
 import Layout from '@/components/Layout';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
-import { image25, logo } from '../assets/imageImports';
+import { image15, logo } from '../assets/imageImports';
 
 const About = () => {
   const [activeTab, setActiveTab] = useState('About Us');
@@ -87,7 +87,7 @@ const About = () => {
         <section className="relative h-screen overflow-hidden">
           <div className="absolute inset-0">
             <img
-              src={image25}
+              src={image15}
               alt="Rancho Costa Verde"
               className="w-full h-full object-cover"
             />

@@ -1,8 +1,8 @@
 import Layout from '@/components/Layout';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
-import { image1, image2, image5, image14, image25, logo } from '../assets/imageImports';
-import costalVideo from '../assets/vishnu/costal.mp4';
+import { image1, image2, image5, image14, logo } from '../assets/imageImports';
+import costalVideo from '../assets/videos/costal.mp4';
 
 const FindUs = () => {
   const [activeTab, setActiveTab] = useState('Dinner Seminars');

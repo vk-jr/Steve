@@ -9,39 +9,41 @@ const WhereWeAre = () => {
             heroImage={image14}
         >
             <div className="space-y-8">
-                <p>
-                    Located in the heart of Baja California, Rancho Costa Verde offers the perfect blend of luxury, nature, and convenience for residents and visitors alike.
-                </p>
-
-                <div className="bg-gray-50 p-8 rounded-lg border border-gray-100">
-                    <h3 className="text-2xl font-cormorant mb-4 text-black">Drive Times</h3>
-                    <ul className="space-y-3">
-                        <li className="flex items-center">
-                            <span className="w-2 h-2 bg-black rounded-full mr-3"></span>
-                            San Felipe, Baja California – 40 minutes
-                        </li>
-                        <li className="flex items-center">
-                            <span className="w-2 h-2 bg-black rounded-full mr-3"></span>
-                            Calexico, CA, USA – 2 hours, 40 minutes
-                        </li>
-                        <li className="flex items-center">
-                            <span className="w-2 h-2 bg-black rounded-full mr-3"></span>
-                            San Diego, CA, USA – 4 hours, 40 minutes
-                        </li>
-                    </ul>
-                </div>
-
                 <div className="w-full h-[400px] rounded-lg overflow-hidden border border-gray-200 shadow-sm">
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3389.677364878664!2d-114.9333333!3d31.0666667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x812e0c0000000001%3A0x0!2sRancho%20Costa%20Verde!5e0!3m2!1sen!2smx!4v1625000000000!5m2!1sen!2smx"
+                        src="https://maps.google.com/maps?q=San+Felipe+-+Puertecitos+Corridor,+Baja+California,+Mexico&t=&z=10&ie=UTF8&iwloc=&output=embed"
                         width="100%"
                         height="100%"
                         style={{ border: 0 }}
                         allowFullScreen
                         loading="lazy"
                         referrerPolicy="no-referrer-when-downgrade"
-                        title="Rancho Costa Verde Location"
+                        title="San Felipe - Puertecitos Location"
                     ></iframe>
+                </div>
+
+                <div className="text-center space-y-8 max-w-3xl mx-auto">
+                    <p className="text-lg leading-relaxed">
+                        Rancho Costa Verde is located 150 miles south of the US border on the east coast of Baja California, Mexico, on the Sea of Cortes. 30 miles south of the town of San Felipe.
+                    </p>
+
+                    <div className="space-y-4">
+                        <p className="text-gray-600">The address is:</p>
+                        <h2 className="text-3xl md:text-4xl font-cormorant text-[#1a9ea3]">
+                            Km 52.5 Hwy 5<br />
+                            San Felipe - Puertecitos Corridor<br />
+                            Baja California, Mexico
+                        </h2>
+                    </div>
+
+                    <div className="space-y-4">
+                        <h3 className="text-xl font-medium">Drive times:</h3>
+                        <ul className="space-y-2 text-gray-700">
+                            <li>San Felipe, Baja California – 40 minutes</li>
+                            <li>Calexico, CA, USA – 2 hours, 40 minutes</li>
+                            <li>San Diego, CA, USA – 4 hours, 40 minutes</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </DevelopmentPageLayout>

@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Star } from 'lucide-react';
-import { image20, image21, image22 } from '../assets/imageImports';
+import { image20, image19, image18 } from '../assets/imageImports';
 
 const Testimonials = () => {
   const testimonials = [
@@ -16,14 +16,14 @@ const Testimonials = () => {
       wedding: "Garden Wedding",
       content: "The attention to detail and creativity in every shot is amazing. Our photos are everything we dreamed of and more.",
       rating: 5,
-      image: image21
+      image: image19
     },
     {
       name: "Rachel & David",
       wedding: "Beach Wedding",
       content: "The photos capture not just the moments, but the emotions and atmosphere of our special day. Absolutely stunning work!",
       rating: 5,
-      image: image22
+      image: image18
     }
   ];
 
@@ -60,11 +60,11 @@ const Testimonials = () => {
                   <Star key={i} size={16} className="text-yellow-400 fill-current" />
                 ))}
               </div>
-              
+
               <p className="text-gray-700 font-inter mb-6 leading-relaxed">
                 "{testimonial.content}"
               </p>
-              
+
               <div className="flex items-center">
                 <img
                   src={testimonial.image}

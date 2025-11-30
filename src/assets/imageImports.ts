@@ -1,36 +1,39 @@
 // Gallery Images
-import image1 from './vishnu/1.jpg';
-import image2 from './vishnu/2.jpg';
-import image3 from './vishnu/3.jpg';
-import image4 from './vishnu/4.jpg';
-import image5 from './vishnu/5.jpg';
-import image6 from './vishnu/6.jpg';
-import image7 from './vishnu/7.jpg';
-import image8 from './vishnu/8.jpg';
-import image9 from './vishnu/9.jpg';
-import image10 from './vishnu/10.jpg';
-import image11 from './vishnu/11.jpg';
-import image12 from './vishnu/12.jpg';
-import image13 from './vishnu/13.webp';
-import image14 from './vishnu/14.webp';
-import image15 from './vishnu/15.webp';
-import image16 from './vishnu/16.jpg';
-import image17 from './vishnu/17.jpg';
-import image18 from './vishnu/18.jpg';
-import image19 from './vishnu/19.jpg';
-import image20 from './vishnu/20.jpg';
-import image21 from './vishnu/21.jpg';
-import image22 from './vishnu/22.jpg';
-import image23 from './vishnu/23.jpg';
-import image24 from './vishnu/24.jpg';
-import image25 from './vishnu/25.jpg';
-import image26 from './vishnu/26.jpg';
-import image27 from './vishnu/27.jpg';
-import logo from './vishnu/rancho_logo.png';
+import image1 from './images/buildings/im1.jpg';
+import image2 from './images/buildings/im2.jpg';
+import image3 from './images/buildings/im3.png';
+import image4 from './images/buildings/im4.png';
+import image5 from './images/buildings/im5.png';
+import image6 from './images/buildings/im6.jpg';
+import image7 from './images/buildings/im7.jpg';
+import image8 from './images/buildings/im8.jpg';
+import image9 from './images/buildings/im9.jpg';
+import image10 from './images/buildings/im10.jpg';
+import image11 from './images/outsideview/im11.jpg';
+import image12 from './images/outsideview/im12.png';
+import image13 from './images/outsideview/im13.png';
+import image14 from './images/outsideview/im14.png';
+import image15 from './images/outsideview/im15.jpg';
+import image16 from './images/outsideview/im16.jpg';
+import image17 from './images/outsideview/im17.jpg';
+import image18 from './images/outsideview/im18.jpg';
+import image19 from './images/outsideview/im19.jpg';
+import image20 from './images/outsideview/im20.jpg';
+import logo from './images/rancho_logo.png';
 
 // Videos
-import urumi1 from './vishnu/costal.mp4';
-import urumi from './vishnu/urumi.mp4';
+import video1 from './videos/costal.mp4';
+import video2 from './videos/inside1.mp4';
+import video3 from './videos/inside2.mp4';
+import video4 from './videos/inside3.mp4';
+import video5 from './videos/outside1.mp4';
+import video6 from './videos/outside2.mp4';
+import video7 from './videos/outside3.mp4';
+import video8 from './videos/outside4.mp4';
+import video9 from './videos/outside5.mp4';
+import video10 from './videos/outside6.mp4';
+
+
 
 export {
     image1,
@@ -53,14 +56,15 @@ export {
     image18,
     image19,
     image20,
-    image21,
-    image22,
-    image23,
-    image24,
-    image25,
-    image26,
-    image27,
-    urumi1,
-    urumi,
+    video1,
+    video2,
+    video3,
+    video4,
+    video5,
+    video6,
+    video7,
+    video8,
+    video9,
+    video10,
     logo
 };

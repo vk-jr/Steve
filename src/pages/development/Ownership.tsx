@@ -1,12 +1,12 @@
 import DevelopmentPageLayout from '@/components/DevelopmentPageLayout';
-import { image23 } from '@/assets/imageImports';
+import { image13 } from '@/assets/imageImports';
 
 const Ownership = () => {
     return (
         <DevelopmentPageLayout
             title="Ownership"
             subtitle="Understanding property ownership in Mexico"
-            heroImage={image23}
+            heroImage={image13}
         >
             <div className="space-y-8">
                 <p>

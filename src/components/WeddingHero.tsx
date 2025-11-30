@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { MoveRight, ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
-import { image1, image5, image16, image23, logo } from '../assets/imageImports';
+import { image1, image5, image16, image13, logo } from '../assets/imageImports';
 
 const WeddingHero = () => {
   const navigate = useNavigate();
@@ -15,7 +15,7 @@ const WeddingHero = () => {
     image1,  // Coastal property
     image5,  // Beach view
     image16, // Community
-    image23  // Ocean lifestyle
+    image13  // Ocean lifestyle
   ], []);
 
   useEffect(() => {

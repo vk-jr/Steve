@@ -1,7 +1,7 @@
 
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
-import { image1, image2, image5, image14, image25, logo } from '../assets/imageImports';
+import { image1, image2, image5, image14, image15, logo } from '../assets/imageImports';
 
 const Lifestyle = () => {
     const [activeFilter, setActiveFilter] = useState('Activities');
@@ -68,7 +68,7 @@ const Lifestyle = () => {
                     {
                         title: "Gonzaga Bay",
                         desc: "Gonzaga Bay is just less than an hour drive south of Rancho Costa Verde. Gonzaga bay is known for its white sandy beach, clear turquoise water and beautiful views. There you can swim with local whale sharks, enjoy spectacular sport fishing, have a nice lunch at Alfonsina’s Hotel on the beach or spend a night or two.",
-                        img: image25
+                        img: image15
                     },
                     {
                         title: "Mike’s Sky Ranch",
@@ -127,7 +127,7 @@ const Lifestyle = () => {
                     </p>
                 </div>
                 <div className="mt-12 rounded-lg overflow-hidden shadow-2xl h-96">
-                    <img src={image25} alt="Delicias" className="w-full h-full object-cover" />
+                    <img src={image15} alt="Delicias" className="w-full h-full object-cover" />
                 </div>
             </div>
         ),
