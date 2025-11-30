@@ -19,6 +19,7 @@ import image17 from './images/outsideview/im17.jpg';
 import image18 from './images/outsideview/im18.jpg';
 import image19 from './images/outsideview/im19.jpg';
 import image20 from './images/outsideview/im20.jpg';
+import bajaRacing from './images/baja_racing.png';
 import logo from './images/rancho_logo.png';
 
 // Videos
@@ -56,6 +57,7 @@ export {
     image18,
     image19,
     image20,
+    bajaRacing,
     video1,
     video2,
     video3,

@@ -1,4 +1,3 @@
-import Layout from '@/components/Layout';
 import WeddingHero from '@/components/WeddingHero';
 import FeaturedGallery from '@/components/FeaturedGallery';
 import Testimonials from '@/components/Testimonials';
@@ -11,7 +10,7 @@ const Index = () => {
   const navigate = useNavigate();
 
   return (
-    <Layout>
+    <>
       <WeddingHero />
 
       {/* About Preview Section */}
@@ -109,7 +108,7 @@ const Index = () => {
           </motion.div>
         </div>
       </section>
-    </Layout>
+    </>
   );
 };
 
