@@ -28,7 +28,7 @@ import image26 from './vishnu/26.jpg';
 import image27 from './vishnu/27.jpg';
 
 // Videos
-import urumi1 from './vishnu/urumi1.mp4';
+import urumi1 from './vishnu/costal.mp4';
 import urumi from './vishnu/urumi.mp4';
 
 export {

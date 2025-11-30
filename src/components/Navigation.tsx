@@ -9,7 +9,7 @@ const Navigation = () => {
   const location = useLocation();
 
   // Pages that have hero sections and should start with transparent navbar
-  const heroPages = ['/', '/about', '/gallery', '/films', '/lifestyle'];
+  const heroPages = ['/', '/about', '/gallery', '/find-us', '/lifestyle'];
   const isHeroPage = heroPages.includes(location.pathname);
 
   useEffect(() => {
@@ -26,7 +26,7 @@ const Navigation = () => {
     { name: 'Gallery', path: '/gallery' },
     { name: 'Lifestyle', path: '/lifestyle' },
     { name: 'About', path: '/about' },
-    { name: 'Films', path: '/films' },
+    { name: 'Find Us', path: '/find-us' },
     { name: 'Contact', path: '/contact' },
   ];
 

@@ -116,7 +116,7 @@ const About = () => {
               <div className="relative aspect-video w-full rounded-xl overflow-hidden shadow-2xl bg-black">
                 <iframe
                   className="absolute top-0 left-0 w-full h-full"
-                  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                  src="https://www.youtube.com/embed/sB3TlJRnbLE?si=jmhbS1hQGX-mAqN6"
                   title="Owner Testimonials"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
