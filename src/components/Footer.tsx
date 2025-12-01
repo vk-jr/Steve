@@ -81,7 +81,7 @@ const Footer = () => {
             ESCROW PRACTICES, CONTROL OVER PROJECT MANAGEMENT, RACIALLY DISCRIMINATORY PRACTICES, TERMS, CONDITIONS AND PRICE OF THE OFFER.
           </p>
           <p className="text-gray-400 font-inter text-xs mt-4">
-            Website Redesigned by <a href="https://slaterockautomation.com/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors duration-300">Slaterock Automation</a>
+            Website Redesigned by <a href="https://a2b.services/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors duration-300">A2B Agency</a>
           </p>
         </div>
       </div>
