@@ -27,9 +27,25 @@ const ProgressBar = memo(({ phase }: { phase: 'loading' | 'expanded' | 'rotated'
     />
 ));
 
+import { image1, image3, image4, image13, image14, logo } from '../assets/imageImports';
+
 const Preloader = ({ onComplete }: { onComplete: () => void }) => {
     const [count, setCount] = useState(0);
     const [phase, setPhase] = useState<'loading' | 'expanded' | 'rotated' | 'split'>('loading');
+    const imagesLoaded = React.useRef(false);
+
+    useEffect(() => {
+        // Preload critical images
+        const imagePaths = [image1, image3, image4, image13, image14, logo];
+        Promise.all(imagePaths.map(src => new Promise((resolve) => {
+            const img = new Image();
+            img.src = src;
+            img.onload = resolve;
+            img.onerror = resolve;
+        }))).then(() => {
+            imagesLoaded.current = true;
+        });
+    }, []);
 
     useEffect(() => {
         const duration = 2000; // 2 seconds loading time
@@ -38,6 +54,11 @@ const Preloader = ({ onComplete }: { onComplete: () => void }) => {
 
         const timer = setInterval(() => {
             setCount((prev) => {
+                // Wait for images to load at 99%
+                if (prev >= 99 && !imagesLoaded.current) {
+                    return 99;
+                }
+
                 if (prev >= 100) {
                     clearInterval(timer);
                     // Start the sequence
