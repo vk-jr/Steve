@@ -7,22 +7,19 @@ const ProgressBar = memo(({ phase }: { phase: 'loading' | 'expanded' | 'rotated'
         className="absolute bg-white left-1/2 top-1/2"
         initial={{ width: 0, height: '1px', x: '-50%', y: '-50%' }}
         animate={{
-            width: phase === 'loading' ? '100%' :
+            width: phase === 'loading' ? '400px' :
                 phase === 'expanded' ? '100vw' :
                     phase === 'rotated' ? '100vh' : '100vh',
-            height: phase === 'rotated' || phase === 'split' ? '1px' : '1px',
+            height: '1px',
             rotate: phase === 'rotated' || phase === 'split' ? 90 : 0,
             opacity: phase === 'split' ? 0 : 1,
             x: '-50%',
             y: '-50%'
         }}
         transition={{
-            width: { duration: phase === 'loading' ? 2 : 0.8, ease: phase === 'loading' ? "linear" : [0.76, 0, 0.24, 1] },
+            width: { duration: phase === 'loading' ? 1 : 0.6, ease: phase === 'loading' ? "linear" : [0.22, 1, 0.36, 1] },
             rotate: { duration: 0.8, ease: [0.76, 0, 0.24, 1] },
             opacity: { duration: 0.3 }
-        }}
-        style={{
-            maxWidth: phase === 'loading' ? '400px' : 'none'
         }}
     />
 ));
@@ -48,7 +45,7 @@ const Preloader = ({ onComplete }: { onComplete: () => void }) => {
     }, []);
 
     useEffect(() => {
-        const duration = 2000; // 2 seconds loading time
+        const duration = 1000; // 1 second loading time
         const steps = 100;
         const intervalTime = duration / steps;
 
@@ -88,7 +85,8 @@ const Preloader = ({ onComplete }: { onComplete: () => void }) => {
                 initial={{ x: 0 }}
                 animate={{ x: phase === 'split' ? '-100%' : 0 }}
                 transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
-                className="absolute left-0 top-0 bottom-0 w-1/2 bg-black z-10"
+                className="absolute left-0 top-0 bottom-0 bg-black z-10"
+                style={{ width: 'calc(50% + 1px)' }}
             />
 
             {/* Right Panel */}
@@ -96,7 +94,8 @@ const Preloader = ({ onComplete }: { onComplete: () => void }) => {
                 initial={{ x: 0 }}
                 animate={{ x: phase === 'split' ? '100%' : 0 }}
                 transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
-                className="absolute right-0 top-0 bottom-0 w-1/2 bg-black z-10"
+                className="absolute right-0 top-0 bottom-0 bg-black z-10"
+                style={{ width: 'calc(50% + 1px)' }}
             />
 
             {/* Content Container */}

@@ -5,9 +5,12 @@ import { motion } from 'framer-motion';
 import { Link, useNavigate } from 'react-router-dom';
 import { image1 } from '../assets/imageImports';
 import { Button } from '@/components/ui/button';
+import { useState } from 'react';
+import ContactModal from '@/components/ContactModal';
 
 const Index = () => {
   const navigate = useNavigate();
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
 
   return (
     <>
@@ -92,7 +95,7 @@ const Index = () => {
               <Button
                 size="lg"
                 className="bg-black text-white hover:bg-gray-800 font-inter px-8"
-                onClick={() => document.getElementById('tour-section')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => setIsContactModalOpen(true)}
               >
                 Schedule a Tour
               </Button>
@@ -108,8 +111,11 @@ const Index = () => {
           </motion.div>
         </div>
       </section>
+
+      <ContactModal isOpen={isContactModalOpen} onClose={() => setIsContactModalOpen(false)} />
     </>
   );
 };
 
 export default Index;
+

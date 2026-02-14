@@ -1,15 +1,15 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Phone, ChevronDown } from 'lucide-react';
-import { Link, useLocation } from 'react-router-dom';
-import ContactModal from './ContactModal';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { logo } from '../assets/imageImports';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [expandedMobileMenu, setExpandedMobileMenu] = useState<string | null>(null);
-  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+  const navigate = useNavigate();
   const location = useLocation();
 
   // Pages that have hero sections and should start with transparent navbar
@@ -63,7 +63,8 @@ const Navigation = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <Link to="/" className="text-2xl font-cormorant font-bold">
+          <Link to="/" className="flex items-center gap-2">
+            <img src={logo} alt="Rancho Costa Verde Logo" className="w-10 h-10 object-contain" />
             <span className={`font-cormorant text-xl font-light tracking-widest ${shouldShowWhiteBg ? 'text-black' : 'text-white'
               }`}>
               RANCHO COSTA VERDE
@@ -125,7 +126,7 @@ const Navigation = () => {
               </div>
             ))}
             <button
-              onClick={() => setIsContactModalOpen(true)}
+              onClick={() => navigate('/contact')}
               className={`flex items-center space-x-2 px-4 py-2 rounded-full transition-all duration-300 ${shouldShowWhiteBg
                 ? 'bg-black text-white hover:bg-gray-800'
                 : 'bg-white text-black hover:bg-gray-100'
@@ -220,7 +221,7 @@ const Navigation = () => {
                   <button
                     onClick={() => {
                       setIsMobileMenuOpen(false);
-                      setIsContactModalOpen(true);
+                      navigate('/contact');
                     }}
                     className="flex items-center space-x-2 bg-black text-white px-4 py-2 rounded-full hover:bg-gray-800 transition-colors duration-200 w-fit"
                   >
@@ -233,7 +234,6 @@ const Navigation = () => {
           )}
         </AnimatePresence>
       </div>
-      <ContactModal isOpen={isContactModalOpen} onClose={() => setIsContactModalOpen(false)} />
     </motion.nav>
   );
 };

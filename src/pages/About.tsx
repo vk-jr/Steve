@@ -1,4 +1,4 @@
-import Layout from '@/components/Layout';
+
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 import { image15, logo } from '../assets/imageImports';
@@ -81,7 +81,7 @@ const About = () => {
   };
 
   return (
-    <Layout>
+    <>
       <div className="min-h-screen">
         {/* Hero Section */}
         <section className="relative h-[60vh] overflow-hidden">
@@ -149,7 +149,7 @@ const About = () => {
           </div>
         </section>
       </div>
-    </Layout>
+    </>
   );
 };
 

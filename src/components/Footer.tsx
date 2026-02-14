@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className="bg-black text-white">
       <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Company Info */}
           <div className="space-y-4">
             <img src={logo} alt="Rancho Costa Verde Logo" className="w-20 mb-4" />
@@ -35,36 +35,52 @@ const Footer = () => {
             </div>
           </div>
 
+          {/* Quick Links */}
+          <div className="space-y-4 md:pl-8">
+            <h4 className="text-lg font-cormorant font-semibold text-white">Quick Links</h4>
+            <ul className="space-y-2 font-inter">
+              <li><Link to="/" className="text-gray-300 hover:text-white transition-colors duration-300">Home</Link></li>
+              <li><Link to="/about" className="text-gray-300 hover:text-white transition-colors duration-300">About</Link></li>
+              <li><Link to="/gallery" className="text-gray-300 hover:text-white transition-colors duration-300">Gallery</Link></li>
+              <li><Link to="/lifestyle" className="text-gray-300 hover:text-white transition-colors duration-300">Lifestyle</Link></li>
+              <li><Link to="/find-us" className="text-gray-300 hover:text-white transition-colors duration-300">Find Us</Link></li>
+              <li><Link to="/contact" className="text-gray-300 hover:text-white transition-colors duration-300">Contact</Link></li>
+            </ul>
+          </div>
+
           {/* Features */}
           <div className="space-y-4">
             <h4 className="text-lg font-cormorant font-semibold text-white">Features</h4>
             <ul className="space-y-2 font-inter">
-              <li><a href="#" className="text-gray-200 hover:text-white transition-colors duration-300">Solar-Powered Homes</a></li>
-              <li><a href="#" className="text-gray-200 hover:text-white transition-colors duration-300">Beachfront Access</a></li>
-              <li><a href="#" className="text-gray-200 hover:text-white transition-colors duration-300">Sustainable Living</a></li>
-              <li><a href="#" className="text-gray-200 hover:text-white transition-colors duration-300">Community Amenities</a></li>
-              <li><a href="#" className="text-gray-200 hover:text-white transition-colors duration-300">Weekend Tours</a></li>
-            </ul>
-          </div>
-
-          {/* Quick Links */}
-          <div className="space-y-4">
-            <h4 className="text-lg font-cormorant font-semibold">Quick Links</h4>
-            <ul className="space-y-2 font-inter">
-              <li><Link to="/" className="text-gray-300 hover:text-white transition-colors duration-300">Home</Link></li>
-              <li><Link to="/about" className="text-gray-300 hover:text-white transition-colors duration-300">About</Link></li>
-              <li><Link to="/moments" className="text-gray-300 hover:text-white transition-colors duration-300">Gallery</Link></li>
-              <li><Link to="/films" className="text-gray-300 hover:text-white transition-colors duration-300">Videos</Link></li>
-              <li><Link to="/contact" className="text-gray-300 hover:text-white transition-colors duration-300">Contact</Link></li>
+              <li><a href="#" className="text-gray-300 hover:text-white transition-colors duration-300">Solar-Powered Homes</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-white transition-colors duration-300">Beachfront Access</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-white transition-colors duration-300">Sustainable Living</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-white transition-colors duration-300">Community Amenities</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-white transition-colors duration-300">Weekend Tours</a></li>
             </ul>
           </div>
 
           {/* Contact Info */}
           <div className="space-y-4">
-            <h4 className="text-lg font-cormorant font-semibold">Contact</h4>
-            <ul className="space-y-2 font-inter">
-              <li className="flex items-center space-x-2">
-                <Phone size={16} />
+            <h4 className="text-lg font-cormorant font-semibold text-white">Contact</h4>
+            <ul className="space-y-3 font-inter">
+              <li>
+                <a href="tel:6059539001" className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-300">
+                  <Phone size={16} className="flex-shrink-0" />
+                  <span>605-953-9001</span>
+                </a>
+              </li>
+              <li>
+                <a href="mailto:Stephendmanning@gmail.com" className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-300">
+                  <Mail size={16} className="flex-shrink-0" />
+                  <span>Stephendmanning@gmail.com</span>
+                </a>
+              </li>
+              <li>
+                <div className="flex items-center space-x-3 text-gray-300">
+                  <MapPin size={16} className="flex-shrink-0" />
+                  <span>Baja California, Mexico</span>
+                </div>
               </li>
             </ul>
           </div>
